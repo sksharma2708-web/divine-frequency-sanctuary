@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Divine Frequency Healing Sanctuary - Spiritual guidance, energy healing, and personal transformation with Sasha. Book your session today.">
+<meta name="keywords" content="healing, tarot, soul reading, energy healing, spiritual guidance, past life regression, angel healing">
+<meta name="author" content="Sasha - Divine Frequency Healing Sanctuary">
+<meta property="og:title" content="The Divine Frequency Healing Sanctuary">
+<meta property="og:description" content="Awaken · Align · Heal · Transform - Spiritual healing and guidance services">
+<meta property="og:type" content="website">
+<title>The Divine Frequency Healing Sanctuary</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --gold:#bfa15f;
+  --gold-dark:#a3854b;
+  --text-dark:#222;
+  --text-light:#666;
+  --bg:#fff;
+  --bg-light:#fdfbf7;
+  --border:#ddd;
+  --instagram:#E4405F;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--text-dark);line-height:1.7;}
+
+/* ── HEADER / NAV ── */
+header{position:sticky;top:0;background:#fff;z-index:900;border-bottom:1px solid #f0f0f0;box-shadow:0 2px 12px rgba(0,0,0,0.04);}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:18px 30px;}
+.brand{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:3px;color:var(--gold);text-decoration:none;white-space:nowrap;}
+
+nav{display:flex;align-items:center;gap:0;}
+nav a{text-transform:uppercase;text-decoration:none;color:var(--text-light);font-size:0.78rem;letter-spacing:2px;padding:8px 14px;transition:color 0.3s;}
+nav a:hover,nav a.active{color:var(--gold);}
+
+/* Dropdown */
+.dropdown{position:relative;}
+.dropdown > a{display:flex;align-items:center;gap:5px;cursor:pointer;}
+.dropdown > a svg.chevron{transition:transform 0.3s;}
+.dropdown:hover > a svg.chevron{transform:rotate(180deg);}
+.dropdown-menu{
+  display:none;position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);
+  background:#fff;border:1px solid var(--border);min-width:200px;z-index:999;
+  box-shadow:0 8px 24px rgba(0,0,0,0.08);
+}
+.dropdown:hover .dropdown-menu{display:block;}
+.dropdown-menu a{display:block;padding:10px 20px;font-size:0.78rem;letter-spacing:1px;color:var(--text-light);text-transform:uppercase;transition:background 0.2s,color 0.2s;}
+.dropdown-menu a:hover{background:#fdfbf7;color:var(--gold);}
+
+.social-icons{display:flex;align-items:center;gap:16px;margin-left:20px;}
+.social-icons a{color:var(--text-light);text-decoration:none;font-size:1.1rem;transition:color 0.3s;}
+.social-icons a:hover{color:var(--gold);}
+.social-icons a.instagram:hover{color:var(--instagram);}
+
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text-dark);margin:5px 0;transition:all 0.3s;}
+
+/* Mobile nav */
+@media(max-width:768px){
+  nav{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#fff;border-top:1px solid #f0f0f0;padding:10px 0;}
+  nav.open{display:flex;}
+  nav a{padding:12px 30px;border-bottom:1px solid #f9f9f9;}
+  .social-icons{margin-left:0;padding:12px 30px;border-top:1px solid #f0f0f0;}
+  .dropdown-menu{position:static;transform:none;box-shadow:none;border:none;border-left:3px solid var(--gold);margin-left:30px;display:none;}
+  .dropdown.open .dropdown-menu{display:block;}
+  .hamburger{display:block;}
+}
+
+/* ── HERO ── */
+.hero{
+  background:linear-gradient(135deg,#fdfbf7 0%,#f7f2e8 50%,#fff 100%);
+  text-align:center;padding:90px 20px 70px;
+  border-bottom:1px solid #f0ece0;
+}
+.hero-tag{font-size:0.72rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;font-weight:500;}
+.hero h1{font-family:'Cinzel',serif;font-size:clamp(1.6rem,4vw,2.8rem);color:#1a1a1a;letter-spacing:5px;margin-bottom:22px;font-weight:400;line-height:1.4;}
+.hero p{font-size:1rem;color:var(--text-light);max-width:680px;margin:0 auto 36px;font-weight:300;}
+.hero-cta{display:inline-block;padding:14px 36px;border:1px solid var(--gold);color:var(--gold);font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:all 0.3s;}
+.hero-cta:hover{background:var(--gold);color:#fff;}
+
+/* ── DIVIDER ── */
+.section-divider{text-align:center;padding:50px 20px 20px;font-family:'Cinzel',serif;font-size:1.3rem;letter-spacing:3px;color:var(--gold);}
+.section-divider::after{content:'';display:block;width:60px;height:1px;background:var(--gold);margin:14px auto 0;}
+
+/* ── SERVICES GRID ── */
+.services-section{padding:20px 20px 80px;}
+.services-inner{max-width:1200px;margin:0 auto;}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+@media(max-width:1024px){.grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.grid{grid-template-columns:1fr 1fr;gap:16px;}}
+
+.card{
+  background:#fff;border:1px solid #e8e4da;padding:36px 16px 32px;
+  text-align:center;display:flex;flex-direction:column;align-items:center;
+  cursor:pointer;transition:transform 0.3s,border-color 0.3s,box-shadow 0.3s;
+  min-height:230px;justify-content:center;
+}
+.card:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 12px 28px rgba(191,161,95,0.12);}
+.card-icon{width:72px;height:72px;margin-bottom:22px;display:flex;align-items:center;justify-content:center;}
+.card-icon svg{width:100%;height:100%;}
+.card h3{font-size:0.9rem;font-weight:500;color:#111;letter-spacing:1px;line-height:1.4;}
+
+/* ── ABOUT ── */
+.about-section{padding:90px 20px;background:var(--bg-light);border-top:1px solid #f0ece0;}
+.about-wrapper{max-width:820px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:60px;align-items:start;}
+@media(max-width:700px){.about-wrapper{grid-template-columns:1fr;gap:36px;}}
+.about-portrait{text-align:center;}
+.portrait-circle{
+  width:180px;height:180px;border-radius:50%;border:3px solid var(--gold);
+  margin:0 auto 20px;overflow:hidden;background:#f5f0e8;
+  display:flex;align-items:center;justify-content:center;
+}
+.portrait-circle svg{width:90px;height:90px;opacity:0.4;}
+.about-name{font-family:'Cinzel',serif;font-size:1.1rem;color:var(--gold);letter-spacing:2px;margin-bottom:6px;}
+.about-title{font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;color:var(--text-light);}
+.about-text h2{font-family:'Cinzel',serif;color:var(--gold);font-size:1.8rem;letter-spacing:3px;margin-bottom:24px;font-weight:400;}
+.about-text p{color:#444;font-size:0.97rem;margin-bottom:18px;font-weight:300;}
+.about-text .tagline{font-family:'Cinzel',serif;font-size:1.05rem;color:var(--gold);font-style:italic;margin-top:28px;}
+
+/* ── CONTACT ── */
+.contact-section{background:#fff;padding:90px 20px;border-top:1px solid #f0ece0;}
+.contact-wrapper{max-width:580px;margin:0 auto;text-align:center;}
+.contact-section h2{font-family:'Cinzel',serif;color:var(--gold);font-size:1.9rem;letter-spacing:3px;margin-bottom:12px;font-weight:400;}
+.contact-section>div>p{color:var(--text-light);font-size:0.95rem;margin-bottom:40px;font-weight:300;}
+form{display:flex;flex-direction:column;gap:14px;text-align:left;}
+label{font-size:0.75rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-light);font-weight:500;}
+input,select,textarea{width:100%;padding:11px 14px;border:1px solid var(--border);font-family:'Montserrat',sans-serif;font-size:0.92rem;outline:none;transition:border-color 0.3s;background:#fff;}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);}
+select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23bfa15f' d='M6 8L0 0h12z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;}
+.btn-submit{background:var(--gold);color:#fff;border:none;padding:14px;text-transform:uppercase;letter-spacing:2.5px;font-size:0.8rem;font-weight:500;cursor:pointer;transition:background 0.3s;font-family:'Montserrat',sans-serif;margin-top:6px;}
+.btn-submit:hover{background:var(--gold-dark);}
+
+/* ── FOOTER ── */
+footer{background:#1a1a1a;color:#888;padding:40px 20px;text-align:center;border-top:1px solid #333;}
+.footer-content{max-width:1200px;margin:0 auto;}
+footer p{font-size:0.8rem;letter-spacing:1px;margin:8px 0;}
+footer span{color:var(--gold);}
+.footer-social{margin:20px 0;display:flex;justify-content:center;gap:20px;}
+.footer-social a{color:#888;text-decoration:none;font-size:1.2rem;transition:color 0.3s;}
+.footer-social a:hover{color:var(--gold);}
+.footer-social a.instagram:hover{color:var(--instagram);}
+.footer-divider{width:60px;height:1px;background:var(--gold);margin:16px auto;}
+
+/* ── MODAL ── */
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);justify-content:center;align-items:center;z-index:1000;padding:20px;}
+.modal.active{display:flex;}
+.modal-content{
+  background:#fff;padding:40px;border:1px solid var(--gold);width:100%;max-width:520px;
+  position:relative;max-height:90vh;overflow-y:auto;animation:fadeUp 0.3s ease;
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.close-btn{position:absolute;top:14px;right:18px;font-size:1.6rem;cursor:pointer;color:#aaa;line-height:1;background:none;border:none;}
+.close-btn:hover{color:var(--gold);}
+.modal h2{font-family:'Cinzel',serif;color:var(--gold);margin-bottom:22px;font-size:1.3rem;letter-spacing:2px;}
+.modal form{gap:13px;}
+
+/* Time slots */
+.slots-label{margin-top:4px;}
+.time-slots-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:4px;}
+.time-slot{border:1px solid var(--border);padding:10px 6px;text-align:center;font-size:0.8rem;cursor:pointer;transition:all 0.2s;font-family:'Montserrat',sans-serif;}
+.time-slot:hover {border-color:var(--gold);color:var(--gold);}
+.time-slot.selected{background:var(--gold);color:#fff;border-color:var(--gold);}
+.no-slots{font-size:0.82rem;color:var(--text-light);font-style:italic;padding:6px 0;}
+
+/* Success message */
+.success-msg{display:none;background:#f0f9f4;border:1px solid #6dbf8a;padding:16px;font-size:0.88rem;color:#2d7a4f;margin-top:10px;text-align:center;border-radius:4px;}
+.error-msg{display:none;background:#fef0f0;border:1px solid #f08080;padding:16px;font-size:0.88rem;color:#c41e3a;margin-top:10px;text-align:center;border-radius:4px;}
+
+/* Loading state */
+.btn-loading{opacity:0.7;pointer-events:none;}
+</style>
+</head>
+<body>
+
+<header>
+<div class="nav-inner">
+  <a class="brand" href="#">✦ DIVINE FREQUENCY</a>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <nav id="mainNav">
+    <a href="#" class="active">Home</a>
+    <div class="dropdown" id="servicesDropdown">
+      <a href="#services">
+        Services
+        <svg class="chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+      <div class="dropdown-menu">
+        <a href="#services" onclick="openBooking('Soul Reading')">Soul Reading</a>
+        <a href="#services" onclick="openBooking('Tarot Card Reading')">Tarot Card Reading</a>
+        <a href="#services" onclick="openBooking('Merlin Trinity Healing System')">Merlin Trinity Healing</a>
+        <a href="#services" onclick="openBooking('Angel Healing')">Angel Healing</a>
+        <a href="#services" onclick="openBooking('Inner Child Healing')">Inner Child Healing</a>
+        <a href="#services" onclick="openBooking('Past Life Regression')">Past Life Regression</a>
+        <a href="#services" onclick="openBooking('Angel Intuitive Card Reading')">Angel Intuitive Cards</a>
+        <a href="#services" onclick="openBooking('Akashic Record Reading')">Akashic Record Reading</a>
+      </div>
+    </div>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <div class="social-icons">
+      <a href="https://instagram.com/sashaheals20" target="_blank" rel="noopener noreferrer" class="instagram" title="Follow on Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="mailto:s.saakshi26@gmail.com" title="Send Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </nav>
+</div>
+</header>
+
+<section class="hero">
+  <p class="hero-tag">Healing · Guidance · Transformation</p>
+  <h1>AWAKEN · ALIGN · HEAL · TRANSFORM</h1>
+  <p>Welcome to The Divine Frequency Healing Sanctuary. Select any healing modality below to schedule your personal consultation and reflection session with Sasha.</p>
+  <a href="#services" class="hero-cta">Explore Modalities</a>
+</section>
+
+<div class="section-divider" id="services">Our Sacred Modalities</div>
+<section class="services-section">
+<div class="services-inner">
+  <div class="grid">
+
+    <div class="card" onclick="openBooking('Soul Reading')">
+      <div class="card-icon">
+        <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="36" cy="36" r="28" stroke="#bfa15f" stroke-width="1.5"/>
+          <circle cx="36" cy="36" r="18" stroke="#bfa15f" stroke-width="1" stroke-dasharray="3 3"/>
+          <path d="M36 16 C28 24 20 28 20 36 C20 44 28 52 36 52 C44 52 52 44 52 36 C52 28 44 24 36 16Z" fill="#bfa15f" fill-opacity="0.12" stroke="#bfa15f" stroke-width="1.2"/>
+          <circle cx="36" cy="36" r="4" fill="#bfa15f" fill-opacity="0.5"/>
+          <line x1="36" y1="8" x2="36" y2="14" stroke="#bfa15f" stroke-width="1.5"/>
+          <line x1="64" y1="36" x2="58" y2="36" stroke="#bfa15f" stroke-width="1.5"/>
+          <line x1="36" y1="64" x2="36" y2="58" stroke="#bfa15f" stroke-width="1.5"/>
+          <line x1="8" y1="36" x2="14" y2="36" stroke="#bfa15f" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <h3>Soul Reading</h3>
+    </div>
+
+    <div class="card" onclick="openBooking('Tarot Card Reading')">
+      <div class="card-icon">
+        <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="22" y="8" width="28" height="44" rx="3" stroke="#bfa15f" stroke-width="1.5" fill="#bfa15f" fill-opacity="0.06"/>
+          <rect x="16" y="14" width="28" height="44" rx="3" stroke="#bfa15f" stroke-width="1.2" fill="#fff" stroke-dasharray="2 2"/>
+          <line x1="22" y1="26" x2="38" y2="26" stroke="#bfa15f" stroke-width="1"/>
+          <line x1="22" y1="32" x2="38" y2="32" stroke="#bfa15f" stroke-width="1"/>
+          <line x1="22" y1="38" x2="32" y2="38" stroke="#bfa15f" stroke-width="1"/>
+          <path d="M30 20 L32 16 L34 20 L38 20 L35 23 L36 27 L32 24 L28 27 L29 23 L26 20Z" fill="#bfa15f" fill-opacity="0.4" stroke="#bfa15f" stroke-width="0.8"/>
+        </svg>
+      </div>
+      <h3>Tarot Card Reading</h3>
+    </div>
+
+    <div class="card" onclick="openBooking('Merlin Trinity Healing System')">
+      <div class="card-icon">
+        <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="36,8 62,55 10,55" stroke="#bfa15f" stroke-width="1.5" fill="#bfa15f" fill-opacity="0.08"/>
+          <polygon points="36,20 52,47 20,47" stroke="#bfa15f" stroke-width="1" fill="#bfa15f" fill-opacity="0.1"/>
+          <circle cx="36" cy="36" r="8" stroke="#bfa15f" stroke-width="1.2" fill="#bfa15f" fill-opacity="0.15"/>
+          <circle cx="36" cy="8" r="3" fill="#bfa15f"/>
+          <circle cx="62" cy="55" r="3" fill="#bfa15f"/>
+          <circle cx="10" cy="55" r="3" fill="#bfa15f"/>
+        </svg>
+      </div>
+      <h3>Merlin Trinity Healing System</h3>
+    </div>
+
+    <div class="card" onclick="openBooking('Angel Healing')">
+      <div class="card-icon">
+        <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M36 14 C36 14 26 22 20 30 C16 36 18 44 24 47 C30 50 36 46 36 46 C36 46 42 50 48 47 C54 44 56 36 52 30 C46 22 36 14 36 14Z" fill="#bfa15f" fill-opacity="0.12" stroke="#bfa15f" stroke-width="1.4"/>
+          <path d="M20 30 C14 26 8 30 10 38 C12 44 20 47 24 47" stroke="#bfa15f" stroke-width="1.2" fill="#bfa15f" fill-opacity="0.08"/>
+          <path d="M52 30 C58 26 64 30 62 38 C60 44 52 47 48 47" stroke="#bfa15f" stroke-width="1.2" fill="#bfa15f" fill-opacity="0.08"/>
+          <circle cx="36" cy="10" r="5" stroke="#bfa15f" stroke-width="1.4" fill="#bfa15f" fill-opacity="0.2"/>
+          <path d="M33 46 C33 52 36 58 36 58 C36 58 39 52 39 46" stroke="#bfa15f" stroke-width="1.2"/>
+        </svg>
+      </div>
+      <h3>Angel Healing</h3>
+    </div>
+
+    <div class="card" onclick="openBooking('Inner Child Healing')">
+      <div class="card-icon">
+        <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="36" cy="22" r="12" stroke="#bfa15f" stroke-width="1.5" fill="#bfa15f" fill-opacity="0.1"/>
+          <path d="M20 52 C20 42 26 38 36 38 C46 38 52 42 52 52" stroke="#bfa15f" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M28 60 C28 52 31 50 36 50 C41 50 44 52 44 60" stroke="#bfa15f" stroke-width="1.2" stroke-dasharray="3 2"/>
+          <circle cx="36" cy="50" r="6" stroke="#bfa15f" stroke-width="1" fill="#bfa15f" fill-opacity="0.08"/>
+          <path d="M32 20 Q36 26 40 20" stroke="#bfa15f" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h3>Inner Child Healing</h3>
+    </div>
+
+    <div class="card" onclick="openBooking('Past Life Regression')">
+      <div class="card-icon">
+        <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="36" cy="36" r="26" stroke="#bfa15f" stroke-width="1.5"/>
+          <path d="M36 10 A26 26 0 0 1 36 62" stroke="#bfa15f" stroke-width="1" stroke-dasharray="4 3"/>
+          <path d="M10 36 Q18 28 26 36 Q34 44 42 36 Q50 28 62 36" stroke="#bfa15f" stroke-width="1.3" stroke-linecap="round"/>
+          <circle cx="36" cy="36" r="3" fill="#bfa15f"/>
+          <line x1="36" y1="36" x2="48" y2="28" stroke="#bfa15f" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="36" y1="36" x2="36" y2="50" stroke="#bfa15f" stroke-width="1" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h3>Past Life Regression</h3>
+    </div>
+
+    <div class="card" onclick="openBooking('Angel Intuitive Card Reading')">
+      <div class="card-icon">
+        <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M36 12 L40 24 L52 24 L43 32 L46 44 L36 37 L26 44 L29 32 L20 24 L32 24Z" fill="#bfa15f" fill-opacity="0.2" stroke="#bfa15f" stroke-width="1.3"/>
+          <rect x="14" y="46" width="44" height="14" rx="2" stroke="#bfa15f" stroke-width="1.2" fill="#bfa15f" fill-opacity="0.06"/>
+          <line x1="26" y1="46" x2="26" y2="60" stroke="#bfa15f" stroke-width="0.8"/>
+          <line x1="36" y1="46" x2="36" y2="60" stroke="#bfa15f" stroke-width="0.8"/>
+          <line x1="46" y1="46" x2="46" y2="60" stroke="#bfa15f" stroke-width="0.8"/>
+        </svg>
+      </div>
+      <h3>Angel Intuitive Card Reading</h3>
+    </div>
+
+    <div class="card" onclick="openBooking('Akashic Record Reading')">
+      <div class="card-icon">
+        <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="36" cy="36" rx="28" ry="14" stroke="#bfa15f" stroke-width="1.5"/>
+          <ellipse cx="36" cy="36" rx="20" ry="10" stroke="#bfa15f" stroke-width="1" stroke-dasharray="3 2"/>
+          <ellipse cx="36" cy="36" rx="12" ry="6" stroke="#bfa15f" stroke-width="1" fill="#bfa15f" fill-opacity="0.1"/>
+          <line x1="36" y1="8" x2="36" y2="22" stroke="#bfa15f" stroke-width="1.5"/>
+          <line x1="36" y1="50" x2="36" y2="64" stroke="#bfa15f" stroke-width="1.5"/>
+          <circle cx="36" cy="36" r="3" fill="#bfa15f"/>
+          <circle cx="36" cy="6" r="2.5" fill="#bfa15f" fill-opacity="0.5"/>
+          <circle cx="36" cy="66" r="2.5" fill="#bfa15f" fill-opacity="0.5"/>
+        </svg>
+      </div>
+      <h3>Akashic Record Reading</h3>
+    </div>
+
+  </div></div>
+</section>
+
+<section class="about-section" id="about">
+<div class="about-wrapper">
+  <div class="about-portrait">
+    <div class="portrait-circle">
+      <svg viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="45" cy="32" r="16" stroke="#bfa15f" stroke-width="1.5"/>
+        <path d="M10 78 C10 58 25 50 45 50 C65 50 80 58 80 78" stroke="#bfa15f" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <p class="about-name">Sasha</p>
+    <p class="about-title">Healer &amp; Guide</p>
+  </div>
+  <div class="about-text">
+    <h2>Welcome, I'm Sasha.</h2>
+    <p>I am a healer, guide, and lifelong student of personal transformation. My journey began with a deep desire to understand myself, heal from within, and reconnect with the wisdom that exists in each of us. Through my experiences in teaching, spiritual development, energy healing, meditation, and intuitive practices, I discovered my passion for helping others navigate their own path of healing and self-discovery.</p>
+    <p>I believe that true transformation happens when we create a safe and supportive space to explore our inner world. My work is dedicated to helping individuals release limiting beliefs, reconnect with their authentic selves, cultivate inner peace, and align with their highest potential.</p>
+    <p>Whether you are seeking healing, clarity, spiritual guidance, or personal growth, I am honoured to walk alongside you on your journey. Together, we can create a deeper connection to your inner wisdom and unlock the possibilities that already exist within you.</p>
+    <p class="tagline">Welcome to your journey home to yourself.</p>
+  </div>
+</div>
+</section>
+
+<section class="contact-section" id="contact">
+<div class="contact-wrapper">
+  <h2>Connect with the Sanctuary</h2>
+  <p>Have questions or unsure where to begin your journey? Leave a message and we will guide you toward the right path.</p>
+  
+  <form id="contactForm" name="contact">
+    <label for="cName">Name</label>
+    <input type="text" name="name" id="cName" required placeholder="Your full name">
+    <label for="cEmail">Email</label>
+    <input type="email" name="email" id="cEmail" required placeholder="Your email address">
+    <label for="cService">Interested in</label>
+    <select name="service_interest" id="cService">
+      <option value="">— Select a modality —</option>
+      <option>Soul Reading</option>
+      <option>Tarot Card Reading</option>
+      <option>Merlin Trinity Healing System</option>
+      <option>Angel Healing</option>
+      <option>Inner Child Healing</option>
+      <option>Past Life Regression</option>
+      <option>Angel Intuitive Card Reading</option>
+      <option>Akashic Record Reading</option>
+      <option>General Enquiry</option>
+    </select>
+    <label for="cMsg">Your Message</label>
+    <textarea name="message" id="cMsg" rows="4" required placeholder="How can we assist your awakening today?"></textarea>
+    <button type="submit" class="btn-submit">Send Message</button>
+    <div class="success-msg" id="contactSuccess">✦ Thank you. We will be in touch soon.</div>
+    <div class="error-msg" id="contactError"></div>
+  </form>
+</div>
+</section>
+
+<footer>
+<div class="footer-content">
+  <p><span>✦ The Divine Frequency Healing Sanctuary ✦</span></p>
+  <p>Awaken · Align · Heal · Transform</p>
+  <div class="footer-divider"></div>
+  <div class="footer-social">
+    <a href="https://instagram.com/sashaheals20" target="_blank" rel="noopener noreferrer" class="instagram" title="Follow on Instagram (@sashaheals20)">
+      <i class="fab fa-instagram"></i> @sashaheals20
+    </a>
+    <a href="mailto:s.saakshi26@gmail.com" title="Send Email to s.saakshi26@gmail.com">
+      <i class="fas fa-envelope"></i> Email
+    </a>
+  </div>
+  <p style="margin-top:16px;font-size:0.7rem;">© 2026 Divine Frequency Healing Sanctuary. All rights reserved.</p>
+</div>
+</footer>
+
+<div id="bookingModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+<div class="modal-content">
+  <button class="close-btn" onclick="closeBooking()" aria-label="Close">×</button>
+  <h2 id="modalTitle">Book a Session</h2>
+  
+  <form id="bookingForm" name="booking">
+    <input type="hidden" id="selectedService" name="Service">
+    <input type="hidden" id="selectedTimeSlot" name="Time Slot">
+
+    <label for="bName">Your Name</label>
+    <input type="text" name="Client Name" id="bName" required placeholder="Full name">
+
+    <label for="bEmail">Email Address</label>
+    <input type="email" name="Client Email" id="bEmail" required placeholder="you@example.com">
+
+    <label for="bPhone">Phone (optional)</label>
+    <input type="tel" name="Phone" id="bPhone" placeholder="+91 00000 00000">
+
+    <label for="bDate">Preferred Date</label>
+    <input type="date" name="Date" id="bDate" required onchange="generateTimeSlots()">
+
+    <label class="slots-label" id="slotsLabel" style="display:none;">Select a Time Slot</label>
+    <div class="time-slots-grid" id="slotsGrid"></div>
+
+    <label for="bNotes">What brings you here today?</label>
+    <textarea name="Notes" id="bNotes" rows="3" placeholder="Share a little about what you'd like to explore or heal…"></textarea>
+
+    <button type="submit" class="btn-submit">Confirm &amp; Book Session</button>
+    <div class="success-msg" id="bookingSuccess">✦ Your session request has been received. Sasha will confirm shortly.</div>
+    <div class="error-msg" id="bookingError"></div>
+  </form>
+</div>
+</div>
+
+<script>
+// ── NAV ──────────────────────────────────────────
+const hamburger = document.getElementById('hamburger');
+const mainNav   = document.getElementById('mainNav');
+hamburger.addEventListener('click', () => {
+  mainNav.classList.toggle('open');
+});
+document.querySelectorAll('.dropdown > a').forEach(a => {
+  a.addEventListener('click', e => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      a.parentElement.classList.toggle('open');
+    }
+  });
+});
+
+// ── MODAL ────────────────────────────────────────
+const modal      = document.getElementById('bookingModal');
+const modalTitle = document.getElementById('modalTitle');
+const svcInput   = document.getElementById('selectedService');
+const slotInput  = document.getElementById('selectedTimeSlot');
+const slotsGrid  = document.getElementById('slotsGrid');
+const slotsLabel = document.getElementById('slotsLabel');
+
+const today = new Date().toISOString().split('T')[0];
+document.getElementById('bDate').setAttribute('min', today);
+
+function openBooking(name) {
+  modal.classList.add('active');
+  modalTitle.innerText = 'Book — ' + name;
+  svcInput.value = name;
+  resetSlots();
+  document.getElementById('bookingForm').reset();
+  svcInput.value = name;
+}
+function closeBooking() {
+  modal.classList.remove('active');
+}
+modal.addEventListener('click', e => { if (e.target === modal) closeBooking(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeBooking(); });
+
+function resetSlots() {
+  slotsGrid.innerHTML = '';
+  slotsLabel.style.display = 'none';
+  slotInput.value = '';
+}
+
+function generateTimeSlots() {
+  resetSlots();
+  const slots = ["9:00 AM","11:00 AM","1:00 PM","3:30 PM","6:00 PM","7:30 PM"];
+  slotsLabel.style.display = 'block';
+  slots.forEach(t => {
+    const btn = document.createElement('div');
+    btn.className = 'time-slot';
+    btn.innerText = t;
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+      btn.classList.add('selected');
+      slotInput.value = t;
+    });
+    slotsGrid.appendChild(btn);
+  });
+}
+
+// ── FORM SUBMISSIONS (send to email) ────────────────
+async function handleContactForm(e) {
+  e.preventDefault();
+  const formEl = document.getElementById('contactForm');
+  const btn = formEl.querySelector('.btn-submit');
+  const successEl = document.getElementById('contactSuccess');
+  const errorEl = document.getElementById('contactError');
+  
+  btn.classList.add('btn-loading');
+  btn.disabled = true;
+  successEl.style.display = 'none';
+  errorEl.style.display = 'none';
+  
+  try {
+    const formData = new FormData(formEl);
+    const emailBody = `
+      Name: ${formData.get('name')}
+      Email: ${formData.get('email')}
+      Service Interest: ${formData.get('service_interest') || 'Not specified'}
+      Message: ${formData.get('message')}
+    `;
+    
+    // Send via email
+    await fetch('https://formspree.io/f/mrevkodn', {
+      method: 'POST',
+      body: formData,
+      headers: { Accept: 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        formEl.reset();
+        successEl.style.display = 'block';
+        setTimeout(() => successEl.style.display = 'none', 6000);
+      } else {
+        throw new Error('Form submission failed');
+      }
+    });
+  } catch (error) {
+    console.error('Submission error:', error);
+    errorEl.textContent = 'Unable to send message. Please try again or contact s.saakshi26@gmail.com directly.';
+    errorEl.style.display = 'block';
+  } finally {
+    btn.classList.remove('btn-loading');
+    btn.disabled = false;
+  }
+}
+
+async function handleBookingForm(e) {
+  e.preventDefault();
+  const formEl = document.getElementById('bookingForm');
+  const btn = formEl.querySelector('.btn-submit');
+  const successEl = document.getElementById('bookingSuccess');
+  const errorEl = document.getElementById('bookingError');
+  
+  if (!slotInput.value) {
+    alert('Please select a time slot.');
+    return;
+  }
+  
+  btn.classList.add('btn-loading');
+  btn.disabled = true;
+  successEl.style.display = 'none';
+  errorEl.style.display = 'none';
+  
+  try {
+    const formData = new FormData(formEl);
+    const emailBody = `
+      Client Name: ${formData.get('Client Name')}
+      Email: ${formData.get('Client Email')}
+      Phone: ${formData.get('Phone') || 'Not provided'}
+      Service: ${formData.get('Service')}
+      Date: ${formData.get('Date')}
+      Time: ${formData.get('Time Slot')}
+      Notes: ${formData.get('Notes')}
+    `;
+    
+    // Send via email
+    await fetch('https://formspree.io/f/mrevkodn', {
+      method: 'POST',
+      body: formData,
+      headers: { Accept: 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        formEl.reset();
+        resetSlots();
+        successEl.style.display = 'block';
+        setTimeout(() => {
+          closeBooking();
+          successEl.style.display = 'none';
+        }, 3000);
+      } else {
+        throw new Error('Booking submission failed');
+      }
+    });
+  } catch (error) {
+    console.error('Booking error:', error);
+    errorEl.textContent = 'Unable to submit booking. Please contact s.saakshi26@gmail.com directly.';
+    errorEl.style.display = 'block';
+  } finally {
+    btn.classList.remove('btn-loading');
+    btn.disabled = false;
+  }
+}
+
+document.getElementById('contactForm').addEventListener('submit', handleContactForm);
+document.getElementById('bookingForm').addEventListener('submit', handleBookingForm);
+
+// ── NAV ACTIVE STATE ON SCROLL ────────────────────
+const sections = document.querySelectorAll('section[id], main[id]');
+const navLinks  = document.querySelectorAll('nav > a[href^="#"]');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
+  navLinks.forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+  });
+});
+</script>
+
+</body>
+</html>
